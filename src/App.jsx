@@ -1,4 +1,4 @@
-import '/src/assets/sass/main.scss';
+import { theme } from 'stitches.config';
 import Home from './pages';
 
 const App = () => {
@@ -6,4 +6,3 @@ const App = () => {
 };
 
 export default App;
-

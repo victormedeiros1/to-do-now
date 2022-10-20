@@ -1,9 +1,6 @@
-import './styles.scss';
-
-const Home = () => (
-  <div>
-    <h1>Home</h1>
-  </div>
-);
+import Todos from '../components/Todos';
+const Home = () => {
+  return <Todos />;
+};
 
 export default Home;
