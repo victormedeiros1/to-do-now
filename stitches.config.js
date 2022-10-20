@@ -113,7 +113,7 @@ export const { theme, createTheme } = createStitches({
       4: 4,
     },
     colors: {
-      background: 'url(/images/backgrounds/light.jpg)',
+      background: 'url(./src/assets/images/bg-dark.jpg)',
       light: '#fff',
       dark: '#222',
       lightgray: '#ccc',

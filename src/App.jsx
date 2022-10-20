@@ -1,4 +1,4 @@
-import { theme } from 'stitches.config';
+import { theme } from '/stitches.config.js';
 import Home from './pages';
 
 const App = () => {
