@@ -6,6 +6,7 @@ export const DividerStyles = styled('div', {
   justifyContent: 'center',
   alignItems: 'center',
   gap: 32,
+  margin: '$8 0',
 });
 
 export const Line = styled('hr', {
