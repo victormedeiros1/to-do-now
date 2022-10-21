@@ -35,7 +35,7 @@ const globalStyles = globalCss({
   //   },
   // },
   body: {
-    backgroundImage: '$background',
+    background: '$light',
     backgroundSize: 'cover',
     backgroundRepeat: 'none',
     backgroundAttachment: 'fixed',
@@ -113,11 +113,11 @@ export const { theme, createTheme } = createStitches({
       4: 4,
     },
     colors: {
-      background: 'url(./src/assets/images/bg-dark.jpg)',
       light: '#fff',
       dark: '#222',
-      lightgray: '#ccc',
+      lightgray: '#999',
       gray: '#494949',
+      green: '#27CA54',
     },
   },
   media: {
@@ -178,10 +178,10 @@ export const { theme, createTheme } = createStitches({
 
 export const darkTheme = createTheme({
   colors: {
-    background: 'url(/images/backgrounds/dark.jpg)',
     light: '#fff',
     dark: '#222',
-    lightgray: '#ccc',
+    lightgray: '#999',
     gray: '#494949',
+    green: '#27CA54',
   },
 });
