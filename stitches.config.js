@@ -117,7 +117,6 @@ export const { theme, createTheme } = createStitches({
       dark: '#222',
       lightgray: '#999',
       gray: '#494949',
-      green: '#27CA54',
     },
   },
   media: {
@@ -182,6 +181,5 @@ export const darkTheme = createTheme({
     dark: '#222',
     lightgray: '#999',
     gray: '#494949',
-    green: '#27CA54',
   },
 });
