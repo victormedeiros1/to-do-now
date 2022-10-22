@@ -18,22 +18,17 @@ const globalStyles = globalCss({
       '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
     scrollBehavior: 'smooth',
   },
-  // '::-webkit-scrollbar': {
-  //   width: 6,
-  // },
+  '::-webkit-scrollbar': {
+    width: 8,
+  },
 
-  // '::-webkit-scrollbar-track': {
-  //   boxShadow: 'inset 0 0 5px gray',
-  // },
+  '::-webkit-scrollbar-thumb': {
+    background: '#CCC',
 
-  // '::-webkit-scrollbar-thumb': {
-  //   background: '$green',
-  //   borderRadius: 10,
-
-  //   '&:hover': {
-  //     background: '#20aa47',
-  //   },
-  // },
+    '&:hover': {
+      background: '#646464',
+    },
+  },
   body: {
     background: '$light',
     backgroundSize: 'cover',

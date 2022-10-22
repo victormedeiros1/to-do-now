@@ -6,7 +6,7 @@ export const BackgroundStyles = styled('div', {
   top: '0',
   left: '0',
   width: '100%',
-  minHeight: '100vh',
+  height: '100%',
   zIndex: '$-1',
 });
 

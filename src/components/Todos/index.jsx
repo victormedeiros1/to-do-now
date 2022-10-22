@@ -6,6 +6,42 @@ const Todos = () => {
   return (
     <TodosStyles>
       <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
       <CreateTodo />
     </TodosStyles>
   );
