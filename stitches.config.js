@@ -57,12 +57,6 @@ globalStyles();
 
 export const { theme, createTheme } = createStitches({
   theme: {
-    colors: {
-      light: '#fff',
-      dark: '#222',
-      lightgray: '#999',
-      gray: '#494949',
-    },
     space: {
       4: '0.25rem',
       8: '0.5rem',

@@ -5,14 +5,14 @@ export const TodoStyles = styled('div', {
   width: '100%',
   display: 'flex',
   alignItems: 'center',
-  boxShadow: '0 1px 6px rgba(0, 0, 0, 0.2)',
+  boxShadow: '$todoShadow',
   transitionDuration: '0.3s',
   borderRadius: 4,
   gap: '0.5rem',
   padding: '0 $12',
 
   '&:has(input:focus)': {
-    boxShadow: '0 1px 6px rgba(0, 0, 0, 0.3)',
+    boxShadow: '$todoShadowFocus',
   },
 });
 
@@ -23,6 +23,7 @@ export const Checkbox = styled('input', {
 });
 
 export const Field = styled('input', {
+  background: '$light',
   color: '$lightgray',
   width: '100%',
   fontSize: '$16',
