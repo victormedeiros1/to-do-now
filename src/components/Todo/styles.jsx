@@ -1,6 +1,7 @@
 import { styled } from '@stitches/react';
 
 export const TodoStyles = styled('div', {
+  background: '$light',
   width: '100%',
   display: 'flex',
   alignItems: 'center',
