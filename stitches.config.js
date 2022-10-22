@@ -111,7 +111,7 @@ export const { theme, createTheme } = createStitches({
       100: '6.25rem',
     },
     zIndices: {
-      '-1': '-1',
+      '-1': -1,
       0: 0,
       1: 1,
       2: 2,

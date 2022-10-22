@@ -1,7 +1,7 @@
 import { ContainerStyles } from './styles';
 
-const Container = ({ children }) => {
-  return <ContainerStyles>{children}</ContainerStyles>;
+const Container = ({ children, className }) => {
+  return <ContainerStyles className={className}>{children}</ContainerStyles>;
 };
 
 export default Container;

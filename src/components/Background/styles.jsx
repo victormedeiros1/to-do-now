@@ -1,6 +1,7 @@
 import { styled } from '@stitches/react';
 
-export const BackgroundBarsStyles = styled('div', {
+export const BackgroundStyles = styled('div', {
+  backgroundColor: '$light',
   position: 'absolute',
   top: '0',
   left: '0',
