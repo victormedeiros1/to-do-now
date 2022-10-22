@@ -57,6 +57,12 @@ globalStyles();
 
 export const { theme, createTheme } = createStitches({
   theme: {
+    colors: {
+      light: '#fff',
+      dark: '#222',
+      lightgray: '#999',
+      gray: '#494949',
+    },
     space: {
       4: '0.25rem',
       8: '0.5rem',
@@ -112,12 +118,6 @@ export const { theme, createTheme } = createStitches({
       3: 3,
       4: 4,
     },
-    colors: {
-      light: '#fff',
-      dark: '#222',
-      lightgray: '#999',
-      gray: '#494949',
-    },
   },
   media: {
     xs: '(max-width: 576px)',
@@ -172,14 +172,5 @@ export const { theme, createTheme } = createStitches({
     pl: (value) => ({
       paddingLeft: value,
     }),
-  },
-});
-
-export const darkTheme = createTheme({
-  colors: {
-    light: '#fff',
-    dark: '#222',
-    lightgray: '#999',
-    gray: '#494949',
   },
 });
