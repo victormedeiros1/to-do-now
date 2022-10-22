@@ -23,7 +23,7 @@ export const Checkbox = styled('input', {
 });
 
 export const Field = styled('input', {
-  background: '$light',
+  background: 'transparent',
   color: '$lightgray',
   width: '100%',
   fontSize: '$16',
