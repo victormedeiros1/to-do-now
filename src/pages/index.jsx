@@ -12,7 +12,7 @@ const Home = () => {
   const { theme } = useSelector((state) => state.themeReducer.theme);
 
   return (
-    <Container className={theme === 'dark-theme' ? lightTheme : darkTheme}>
+    <Container className={theme === 'light-theme' ? darkTheme : lightTheme}>
       <ToggleTheme />
       <H1>TO-DO NOW</H1>
       <Divider />
