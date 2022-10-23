@@ -6,6 +6,7 @@ const globalStyles = globalCss({
     "url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap')",
   ],
   '*': {
+    transitionDuration: '0.3s',
     fontFamily: 'Quicksand, sans-serif',
     boxSizing: 'border-box',
     padding: 0,
