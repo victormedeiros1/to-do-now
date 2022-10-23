@@ -24,13 +24,13 @@ export const ButtonToggle = styled('div', {
   padding: 1,
 });
 export const DarkSide = styled('div', {
-  background: '$gray',
+  background: '#494949',
   width: '50%',
   height: '100%',
   borderRadius: '100px 0 0 100px',
 });
 export const LightSide = styled('div', {
-  background: '$light',
+  background: '#fff',
   width: '50%',
   height: '100%',
   borderRadius: '0 100px 100px 0',

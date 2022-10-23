@@ -5,7 +5,6 @@ import { useState } from 'react';
 
 const ToggleTheme = () => {
   const [theme, setTheme] = useState('light-theme');
-
   const dispatch = useDispatch();
 
   const handleTheme = () => {
@@ -15,7 +14,12 @@ const ToggleTheme = () => {
 
   return (
     <ToggleThemeStyles>
-      <ButtonToggle onClick={handleTheme}>
+      <ButtonToggle
+        style={{
+          transform: theme === 'light-theme' ? 'rotate(0deg)' : 'rotate(180deg)',
+        }}
+        onClick={handleTheme}
+      >
         <DarkSide />
         <LightSide />
       </ButtonToggle>
