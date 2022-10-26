@@ -8,3 +8,11 @@ export const addTodo = () => ({
     isChecked: false,
   },
 });
+
+export const updateTodo = (id, updates) => ({
+  type: 'UPDATE_TODO',
+  todo: {
+    id,
+    updates,
+  },
+});

@@ -1,10 +1,27 @@
-import { TodoStyles, Checkbox, Field } from './styles';
+import { TodoStyles, Checkbox, TextField } from './styles';
+import { useDispatch } from 'react-redux';
+import { useState } from 'react';
+import { updateTodo } from '../../store/actions/todos';
 
-const Todo = () => {
+const Todo = ({ id }) => {
+  const dispatch = useDispatch();
+
+  const [text, setText] = useState('');
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheckbox = (e) => {
+    setIsChecked(e.target.value);
+    dispatch(updateTodo(id, { isChecked }));
+  };
+  const handleTextField = (e) => {
+    setText(e.target.value);
+    dispatch(updateTodo(id, { text }));
+  };
+
   return (
     <TodoStyles>
-      <Checkbox type="checkbox" />
-      <Field type="text" />
+      <Checkbox onChange={(e) => handleCheckbox(e)} type="checkbox" />
+      <TextField onChange={(e) => handleTextField(e)} name="text" type="text" />
     </TodoStyles>
   );
 };
