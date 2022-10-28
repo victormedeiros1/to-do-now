@@ -1,7 +1,8 @@
-import { TodoStyles, Checkbox, TextField } from './styles';
+import { TodoStyles, Inputs, Checkbox, TextField, Delete, Bar } from './styles';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { updateTodo } from '../../store/actions/todos';
+import { Trash } from 'phosphor-react';
 
 const Todo = ({ id }) => {
   const dispatch = useDispatch();
@@ -20,8 +21,14 @@ const Todo = ({ id }) => {
 
   return (
     <TodoStyles>
-      <Checkbox onChange={(e) => handleCheckbox(e)} type="checkbox" />
-      <TextField onChange={(e) => handleTextField(e)} name="text" type="text" />
+      <Bar />
+      <Delete>
+        <Trash size={20} color="#ccc" />
+      </Delete>
+      <Inputs>
+        <Checkbox onChange={(e) => handleCheckbox(e)} type="checkbox" />
+        <TextField onChange={(e) => handleTextField(e)} name="text" type="text" />
+      </Inputs>
     </TodoStyles>
   );
 };
