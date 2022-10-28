@@ -8,7 +8,6 @@ export const lightTheme = createTheme('light-theme', {
     gray: '#494949',
   },
   shadows: {
-    todoShadow: '0 1px 6px rgba(0,0,0,0.3)',
-    todoShadowFocus: '0 1px 6px rgba(0,0,0,0.5)',
+    todoShadow: '0 0 6px rgba(0,0,0,0.3)',
   },
 });

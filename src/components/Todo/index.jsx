@@ -1,8 +1,8 @@
-import { TodoStyles, Inputs, Checkbox, TextField, Delete, Bar } from './styles';
+import { TodoStyles, Inputs, Checkbox, TextField, Delete, Bar, Label } from './styles';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { updateTodo } from '../../store/actions/todos';
-import { Trash } from 'phosphor-react';
+import { CheckSquare, Square, Trash } from 'phosphor-react';
 
 const Todo = ({ id }) => {
   const dispatch = useDispatch();
@@ -11,7 +11,7 @@ const Todo = ({ id }) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckbox = (e) => {
-    setIsChecked(e.target.value);
+    setIsChecked(!isChecked);
     dispatch(updateTodo(id, { isChecked }));
   };
   const handleTextField = (e) => {
@@ -23,11 +23,23 @@ const Todo = ({ id }) => {
     <TodoStyles>
       <Bar />
       <Delete>
-        <Trash size={20} color="#ccc" />
+        <Trash size={20} color="#222" />
       </Delete>
       <Inputs>
-        <Checkbox onChange={(e) => handleCheckbox(e)} type="checkbox" />
-        <TextField onChange={(e) => handleTextField(e)} name="text" type="text" />
+        {isChecked ? (
+          <CheckSquare onClick={(e) => handleCheckbox(e)} size={24} color="#999" />
+        ) : (
+          <Square onClick={(e) => handleCheckbox(e)} size={24} color="#999" />
+        )}
+
+        <TextField
+          onChange={(e) => handleTextField(e)}
+          name="text"
+          type="text"
+          textDecoration={isChecked && 'lineThrough'}
+          disabled={isChecked}
+          placeholder="Type somenthing..."
+        />
       </Inputs>
     </TodoStyles>
   );
