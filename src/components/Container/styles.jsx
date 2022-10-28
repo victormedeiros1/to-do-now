@@ -7,4 +7,8 @@ export const ContainerStyles = styled('div', {
   textAlign: 'center',
   padding: '$32 $20',
   margin: '0 auto',
+
+  '@media (max-width: 576px)': {
+    padding: '$32 $8',
+  },
 });
