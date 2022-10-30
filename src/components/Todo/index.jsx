@@ -1,4 +1,4 @@
-import { TodoStyles, Inputs, Checkbox, TextField, Delete, Bar, Label } from './styles';
+import { TodoStyles, Inputs, TextField, Delete, Bar } from './styles';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { deleteTodo, updateTodo } from '../../store/actions/todos';
@@ -26,13 +26,17 @@ const Todo = ({ id }) => {
     <TodoStyles>
       <Bar />
       <Delete onClick={handleDelete}>
-        <Trash size={20} color="#222" />
+        <Trash className="trash-icon-color" size={20} />
       </Delete>
       <Inputs>
         {isChecked ? (
-          <CheckSquare onClick={(e) => handleCheckbox(e)} size={24} color="#999" />
+          <CheckSquare
+            className="check-icon-color"
+            onClick={(e) => handleCheckbox(e)}
+            size={24}
+          />
         ) : (
-          <Square onClick={(e) => handleCheckbox(e)} size={24} color="#999" />
+          <Square className="check-icon-color" onClick={(e) => handleCheckbox(e)} />
         )}
 
         <TextField

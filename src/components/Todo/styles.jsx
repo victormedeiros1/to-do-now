@@ -19,6 +19,10 @@ export const TodoStyles = styled('div', {
     outline: 0,
     boxShadow: '$todoShadow',
   },
+
+  '.trash-icon-color': {
+    color: '$light',
+  },
 });
 
 export const Inputs = styled('div', {
@@ -35,6 +39,10 @@ export const Inputs = styled('div', {
   svg: {
     cursor: 'pointer',
   },
+
+  '.check-icon-color': {
+    color: '$lightgray',
+  },
 });
 
 export const Label = styled('label', {
@@ -50,10 +58,10 @@ export const Checkbox = styled('input', {
 
 export const TextField = styled('input', {
   background: 'transparent',
+  border: 'none',
+  fontSize: '$16',
   color: '$lightgray',
   width: '100%',
-  fontSize: '$16',
-  border: 'none',
   padding: '$12 0',
 
   variants: {
@@ -81,7 +89,7 @@ export const Delete = styled('button', {
   right: 0,
 
   '&:hover': {
-    filter: 'invert(100%)',
+    backgroundColor: '$gray',
   },
 });
 

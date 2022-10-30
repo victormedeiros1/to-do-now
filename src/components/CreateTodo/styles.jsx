@@ -10,4 +10,8 @@ export const ButtonCreateTodo = styled('button', {
   '&:hover': {
     backgroundColor: 'rgba(0,0,0,0.03)',
   },
+
+  '.plus-icon-color': {
+    color: '$gray',
+  },
 });

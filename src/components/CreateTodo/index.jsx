@@ -8,7 +8,7 @@ const CreateTodo = () => {
 
   return (
     <ButtonCreateTodo onClick={() => dispatch(addTodo())}>
-      <Plus size={16} color="#999" />
+      <Plus className="plus-icon-color" size={16} />
     </ButtonCreateTodo>
   );
 };

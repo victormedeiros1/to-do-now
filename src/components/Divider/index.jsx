@@ -5,7 +5,7 @@ const Divider = () => {
   return (
     <DividerStyles>
       <Line />
-      <NotePencil size={32} color="#999" />
+      <NotePencil className="note-pencil-icon-color" size={32} />
       <Line />
     </DividerStyles>
   );
