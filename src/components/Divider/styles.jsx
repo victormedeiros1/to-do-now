@@ -8,8 +8,16 @@ export const DividerStyles = styled('div', {
   gap: 32,
   margin: '$8 0',
 
+  '@media (max-width: 576px)': {
+    gap: 16,
+  },
+
   '.note-pencil-icon-color': {
     color: '$gray',
+
+    '@media (max-width: 576px)': {
+      width: 24,
+    },
   },
 });
 
