@@ -12,6 +12,12 @@ export const ToggleThemeStyles = styled('div', {
   height: 80,
   paddingBottom: '$16',
   borderRadius: '0 0 100px 100px',
+
+  '@media(max-width: 576px)': {
+    width: 32,
+    height: 60,
+    paddingBottom: '$10',
+  },
 });
 
 export const ButtonToggle = styled('div', {
@@ -22,6 +28,11 @@ export const ButtonToggle = styled('div', {
   borderRadius: '50%',
   cursor: 'pointer',
   padding: 1,
+
+  '@media(max-width: 576px)': {
+    width: 12,
+    height: 12,
+  },
 });
 export const DarkSide = styled('div', {
   background: '#494949',
