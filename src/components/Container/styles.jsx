@@ -2,7 +2,7 @@ import { styled } from '@stitches/react';
 
 export const ContainerStyles = styled('div', {
   width: '100%',
-  minHeight: '100vh',
+  minHeight: 'calc(100vh - $48)',
   maxWidth: 840,
   textAlign: 'center',
   padding: '$48 $20',
