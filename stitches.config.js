@@ -56,6 +56,7 @@ export const { theme, createTheme } = createStitches({
     space: {
       4: '0.25rem',
       8: '0.5rem',
+      10: '0.625rem',
       12: '0.75rem',
       16: '1rem',
       20: '1.25rem',
@@ -108,11 +109,6 @@ export const { theme, createTheme } = createStitches({
       3: 3,
       4: 4,
     },
-  },
-  media: {
-    xs: '(max-width: 576px)',
-    sm: '(max-width: 768px)',
-    md: '(max-width: 992px)',
   },
   utils: {
     m: (value) => ({
