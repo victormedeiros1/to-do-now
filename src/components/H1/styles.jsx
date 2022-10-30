@@ -6,6 +6,10 @@ export const Main = styled('main', {
   alignItems: 'center',
   marginBottom: '$24',
   gap: '1.5rem',
+
+  '@media(max-width: 576px)': {
+    marginBottom: '$8',
+  },
 });
 
 export const H1Styles = styled('h1', {
@@ -21,5 +25,4 @@ export const Line = styled('hr', {
   border: '1px solid $gray',
   backgroundColor: '$gray',
   width: 50,
-  height: 2,
 });

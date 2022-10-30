@@ -8,4 +8,8 @@ export const TodosStyles = styled('div', {
   gap: '0.5rem',
   margin: '$24 0',
   padding: '$24 $32',
+
+  '@media(max-width: 576px)': {
+    margin: 0,
+  },
 });
