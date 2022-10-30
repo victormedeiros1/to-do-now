@@ -9,12 +9,17 @@ export const Main = styled('main', {
 });
 
 export const H1Styles = styled('h1', {
-  color: '$gray',
   fontSize: '$64',
+  color: '$gray',
+
+  '@media(max-width: 576px)': {
+    fontSize: '$32',
+  },
 });
 
 export const Line = styled('hr', {
   border: '1px solid $gray',
+  backgroundColor: '$gray',
   width: 50,
   height: 2,
 });
