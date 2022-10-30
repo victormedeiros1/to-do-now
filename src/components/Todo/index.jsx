@@ -1,7 +1,7 @@
 import { TodoStyles, Inputs, Checkbox, TextField, Delete, Bar, Label } from './styles';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { updateTodo } from '../../store/actions/todos';
+import { deleteTodo, updateTodo } from '../../store/actions/todos';
 import { CheckSquare, Square, Trash } from 'phosphor-react';
 
 const Todo = ({ id }) => {
@@ -18,11 +18,14 @@ const Todo = ({ id }) => {
     setText(e.target.value);
     dispatch(updateTodo(id, { text }));
   };
+  const handleDelete = () => {
+    dispatch(deleteTodo(id));
+  };
 
   return (
     <TodoStyles>
       <Bar />
-      <Delete>
+      <Delete onClick={handleDelete}>
         <Trash size={20} color="#222" />
       </Delete>
       <Inputs>
@@ -38,7 +41,7 @@ const Todo = ({ id }) => {
           type="text"
           textDecoration={isChecked && 'lineThrough'}
           disabled={isChecked}
-          placeholder="Type somenthing..."
+          placeholder="Type something..."
         />
       </Inputs>
     </TodoStyles>

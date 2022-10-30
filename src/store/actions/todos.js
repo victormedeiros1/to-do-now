@@ -16,3 +16,10 @@ export const updateTodo = (id, updates) => ({
     updates,
   },
 });
+
+export const deleteTodo = (id) => ({
+  type: 'DELETE_TODO',
+  todo: {
+    id,
+  },
+});

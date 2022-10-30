@@ -19,6 +19,10 @@ export const todosReducer = (state = INITIAL_STATE, action) => {
           }
         }),
       };
+    case 'DELETE_TODO':
+      return {
+        todos: state.todos.filter(({ id }) => id !== action.todo.id),
+      };
     default:
       return state;
   }
