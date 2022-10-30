@@ -64,16 +64,16 @@ export const TextField = styled('input', {
   width: '100%',
   padding: '$12 0',
 
+  '&:focus': {
+    outline: 0,
+  },
+
   variants: {
     textDecoration: {
       lineThrough: {
         textDecoration: 'line-through',
       },
     },
-  },
-
-  '&:focus': {
-    outline: 0,
   },
 });
 
