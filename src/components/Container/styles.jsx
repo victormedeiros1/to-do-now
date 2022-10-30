@@ -5,10 +5,10 @@ export const ContainerStyles = styled('div', {
   minHeight: '100vh',
   maxWidth: 840,
   textAlign: 'center',
-  padding: '$32 $20',
+  padding: '$48 $20',
   margin: '0 auto',
 
   '@media (max-width: 576px)': {
-    padding: '$32 $8',
+    padding: '$48 $8',
   },
 });
