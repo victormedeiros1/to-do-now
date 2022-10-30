@@ -1,10 +1,10 @@
-import { BackgroundStyles, BottomBar, TopBar } from './styles';
+import { BackgroundStyles, Bar } from './styles';
 
 const Background = () => {
   return (
     <BackgroundStyles>
-      <TopBar />
-      <BottomBar />
+      <Bar position="top" />
+      <Bar position="bottom" />
     </BackgroundStyles>
   );
 };
