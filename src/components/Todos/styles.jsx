@@ -1,7 +1,7 @@
 import { styled } from '@stitches/react';
 
 export const TodosStyles = styled('div', {
-  maxHeight: '60vh',
+  maxHeight: '50vh',
   overflowX: 'scroll',
   display: 'flex',
   flexDirection: 'column',
