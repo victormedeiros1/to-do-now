@@ -1,4 +1,10 @@
-import { styled } from '@stitches/react';
+import { styled, keyframes } from '@stitches/react';
+
+export const rotate = keyframes({
+  from: {
+    transform: 'rotateY(180deg)',
+  },
+});
 
 export const TodoStyles = styled('div', {
   position: 'relative',
@@ -26,6 +32,7 @@ export const TodoStyles = styled('div', {
 });
 
 export const Inputs = styled('div', {
+  overflow: 'hidden',
   position: 'relative',
   background: '$light',
   width: '100%',
@@ -42,6 +49,7 @@ export const Inputs = styled('div', {
 
   '.check-icon-color': {
     color: '$lightgray',
+    animation: `${rotate} 0.3s linear`,
   },
 });
 

@@ -34,12 +34,16 @@ const Todo = ({ id }) => {
       <Inputs>
         {isChecked ? (
           <CheckSquare
-            className="check-icon-color"
+            className="check-icon-color check-square"
             onClick={(e) => handleCheckbox(e)}
             size={24}
           />
         ) : (
-          <Square className="check-icon-color" onClick={(e) => handleCheckbox(e)} />
+          <Square
+            size={24}
+            className="check-icon-color check"
+            onClick={(e) => handleCheckbox(e)}
+          />
         )}
 
         <TextField
