@@ -9,7 +9,7 @@ const Todo = ({ id, text, isChecked }) => {
   const [todoText, setTodoText] = useState(text);
   const [todoIsChecked, setTodoIsChecked] = useState(isChecked);
 
-  const handleCheckbox = () => {
+  const handleCheckbox = (e) => {
     setTodoIsChecked(!todoIsChecked);
     dispatch(updateTodo(id, { isChecked: todoIsChecked }));
   };
@@ -17,7 +17,7 @@ const Todo = ({ id, text, isChecked }) => {
   const handleTextField = useCallback(
     (e) => {
       setTodoText(e.target.value);
-      dispatch(updateTodo(id, { text: todoText }));
+      dispatch(updateTodo(id, { text: e.target.value }));
     },
     [todoText]
   );
