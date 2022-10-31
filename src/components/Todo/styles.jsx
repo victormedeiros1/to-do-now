@@ -18,7 +18,6 @@ export const TodoStyles = styled('div', {
     right: -28,
   },
   '&:hover > span': {
-    boxShadow: '$todoShadow',
     right: -37,
   },
   '&:has(input:focus)': {
