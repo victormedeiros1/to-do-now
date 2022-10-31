@@ -9,10 +9,10 @@ const Todo = ({ id, text, isChecked }) => {
   const [todoText, setTodoText] = useState(text);
   const [todoIsChecked, setTodoIsChecked] = useState(isChecked);
 
-  const handleCheckbox = (e) => {
+  const handleCheckbox = useCallback(() => {
     setTodoIsChecked(!todoIsChecked);
-    dispatch(updateTodo(id, { isChecked: todoIsChecked }));
-  };
+    dispatch(updateTodo(id, { isChecked: !isChecked }));
+  }, [todoIsChecked]);
 
   const handleTextField = useCallback(
     (e) => {
