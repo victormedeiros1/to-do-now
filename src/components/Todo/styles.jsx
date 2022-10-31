@@ -79,6 +79,7 @@ export const TextField = styled('input', {
     textDecoration: {
       lineThrough: {
         textDecoration: 'line-through',
+        opacity: 0.5,
       },
     },
   },
