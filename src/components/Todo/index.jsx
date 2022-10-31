@@ -1,7 +1,6 @@
 import { TodoStyles, Inputs, TextField, Delete, Bar } from './styles';
 import { useDispatch } from 'react-redux';
 import { useCallback, useState } from 'react';
-import _ from 'lodash';
 import { deleteTodo, updateTodo } from '../../store/actions/todos';
 import { CheckSquare, Square, Trash } from 'phosphor-react';
 
