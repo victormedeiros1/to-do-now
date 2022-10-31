@@ -5,25 +5,24 @@ import _ from 'lodash';
 import { deleteTodo, updateTodo } from '../../store/actions/todos';
 import { CheckSquare, Square, Trash } from 'phosphor-react';
 
-const Todo = ({ id }) => {
+const Todo = ({ id, text, isChecked }) => {
   const dispatch = useDispatch();
 
-  const [text, setText] = useState('');
-  const [isChecked, setIsChecked] = useState(false);
+  const [todoText, setTodoText] = useState(text);
+  const [todoIsChecked, setTodoIsChecked] = useState(isChecked);
 
-  const handleCheckbox = (e) => {
-    setIsChecked(!isChecked);
-    dispatch(updateTodo(id, { isChecked }));
+  const handleCheckbox = () => {
+    setTodoIsChecked(!todoIsChecked);
+    console.log(todoIsChecked);
+    dispatch(updateTodo(id, { isChecked: todoIsChecked }));
   };
 
   const handleTextField = _.debounce((e) => {
-    setText(e.target.value);
-    dispatch(updateTodo(id, { text }));
-  }, 100);
+    setTodoText(e.target.value);
+    dispatch(updateTodo(id, { text: todoText }));
+  }, 500);
 
-  const handleDelete = () => {
-    dispatch(deleteTodo(id));
-  };
+  const handleDelete = () => dispatch(deleteTodo(id));
 
   return (
     <TodoStyles>
@@ -32,27 +31,25 @@ const Todo = ({ id }) => {
         <Trash className="trash-icon-color" size={20} />
       </Delete>
       <Inputs>
-        {isChecked ? (
+        {todoIsChecked ? (
           <CheckSquare
             className="check-icon-color check-square"
-            onClick={(e) => handleCheckbox(e)}
+            onClick={handleCheckbox}
             size={24}
           />
         ) : (
-          <Square
-            size={24}
-            className="check-icon-color check"
-            onClick={(e) => handleCheckbox(e)}
-          />
+          <Square className="check-icon-color check" onClick={handleCheckbox} size={24} />
         )}
 
         <TextField
-          onChange={(e) => handleTextField(e)}
+          onChange={handleTextField}
           name="text"
           type="text"
-          textDecoration={isChecked && 'lineThrough'}
-          disabled={isChecked}
+          value={todoText}
+          textDecoration={todoIsChecked && 'lineThrough'}
           placeholder="Type something..."
+          disabled={todoIsChecked}
+          autoFocus
         />
       </Inputs>
     </TodoStyles>
