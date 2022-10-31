@@ -15,10 +15,12 @@ const Todo = ({ id }) => {
     setIsChecked(!isChecked);
     dispatch(updateTodo(id, { isChecked }));
   };
+
   const handleTextField = _.debounce((e) => {
     setText(e.target.value);
     dispatch(updateTodo(id, { text }));
-  }, 300);
+  }, 100);
+
   const handleDelete = () => {
     dispatch(deleteTodo(id));
   };
