@@ -1,6 +1,7 @@
 import { TodoStyles, Inputs, TextField, Delete, Bar } from './styles';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+import _ from 'lodash';
 import { deleteTodo, updateTodo } from '../../store/actions/todos';
 import { CheckSquare, Square, Trash } from 'phosphor-react';
 
@@ -14,10 +15,10 @@ const Todo = ({ id }) => {
     setIsChecked(!isChecked);
     dispatch(updateTodo(id, { isChecked }));
   };
-  const handleTextField = (e) => {
+  const handleTextField = _.debounce((e) => {
     setText(e.target.value);
     dispatch(updateTodo(id, { text }));
-  };
+  }, 300);
   const handleDelete = () => {
     dispatch(deleteTodo(id));
   };
