@@ -4,6 +4,7 @@ import Todos from '../components/Todos';
 import H1 from '../components/H1';
 import Background from '../components/Background';
 import ToggleTheme from '../components/ToggleTheme';
+import Footer from '../components/Footer';
 import { useSelector } from 'react-redux';
 import { lightTheme } from '../theme/light';
 import { darkTheme } from '../theme/dark';
@@ -17,6 +18,7 @@ const Home = () => {
       <H1>TO-DO NOW</H1>
       <Divider />
       <Todos />
+      <Footer />
       <Background />
     </Container>
   );
