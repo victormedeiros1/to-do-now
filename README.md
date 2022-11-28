@@ -1,3 +1,5 @@
+![to-do-now-thumbnail](https://user-images.githubusercontent.com/66215200/204297562-06386055-ec7d-49dd-b913-efd5a9b60856.jpg)
+
 # About
 
 The goal was to experiment with new technologies and play with Redux in practice. My applications were in need of more organized state management, so I discovered Redux.
