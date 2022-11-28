@@ -6,9 +6,9 @@ The goal was to experiment with new technologies and play with Redux in practice
 
 This application was a great opportunity to test numerous new technologies:
 
-Styled Components -> Stitches
-Font Awesome -> Phosphor Icons.
-create-react-app -> Vite
+* Styled Components -> Stitches
+* Font Awesome -> Phosphor Icons.
+* create-react-app -> Vite
 
 # Getting Started with Vite!
 
